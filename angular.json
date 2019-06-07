@@ -20,6 +20,8 @@
             "outputPath": "dist/BlogProject",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref" : "/blog-app-prod/",
+            "deployUrl": "/blog-app-prod/",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
