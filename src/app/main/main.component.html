@@ -1,9 +1,6 @@
-<p>
-  main works! {{myDisplayData.length}}
-</p>
-<p> page is: {{currentPage}}</p>
+
 <div class="row">
-<div class="col-8">
+<div class="col-md-8 col-sm-12">
       <app-post-prev  *ngFor="let post of filteredData | slice:currentPage*PostsPerPage:(currentPage+1)*PostsPerPage" 
       [post]="post"></app-post-prev>
     <span *ngIf="(currentPage+1)*PostsPerPage <= myDisplayData.length" [routerLink]="['/posts', currentPage+1]" queryParamsHandling="merge">NEXT</span>

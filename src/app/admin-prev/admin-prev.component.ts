@@ -10,7 +10,7 @@ export class AdminPrevComponent implements OnInit {
   @Input () post
   @Input () myIndex
   
-  titleHandler(){
+  titleHandler(e){
     //set title here
     console.log('SETTING TITLE!!!!')
     this.PT.setTitle(this.post.title)
