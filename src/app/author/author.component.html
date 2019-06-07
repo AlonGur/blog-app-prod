@@ -1,0 +1,14 @@
+
+
+
+
+    <a *ngIf="makeActive; else notActive" routerLink='/posts' [queryParams]="{author: author}" routerLinkActive="active" >
+        <span appButton>{{author}}</span>
+        </a>
+    
+        <ng-template #notActive>
+            <a  routerLink='/posts' [queryParams]="{author: author}">
+              <span appButton>{{author}}</span>
+              </a>
+    
+        </ng-template>

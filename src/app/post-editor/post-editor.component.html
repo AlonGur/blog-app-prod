@@ -1,0 +1,29 @@
+<p>
+  post-editor works!
+</p>
+<div class="postWrapper"></div>
+
+<div>Title: 
+  <input class="title"[(ngModel)]="myPost.title">
+</div>
+<div>Author: 
+  <input class="author" [(ngModel)]="myPost.author">
+</div>
+<div>Date: 
+  <input class="date" [(ngModel)]="myPost.date">
+</div>
+<button (click)="saveChanges($event)" >save</button>
+
+<div class="row">
+    <div class="col-6" >
+      <h3>MARKDOWN:</h3>
+      <textarea class="markdownWrapper" [(ngModel)]="markDown" ></textarea>
+      </div>
+    <div class="col-6" >
+      <h3>HTML</h3>
+     
+      <div class="htmlWrapper" [innerHTML]="markDown|MarkdownToHtml">
+      
+      </div>
+    </div>
+</div>

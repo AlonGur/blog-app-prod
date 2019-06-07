@@ -1,0 +1,28 @@
+<p (click)="clickMe()">
+  sidebar works! {{linkDest}}
+</p>
+
+<span [routerLink]="linkDest" >    SEE ALL POSTS </span>
+<div class="sortByCategory">
+  <h3>sortByCategory</h3>
+ 
+  <li *ngFor="let tag of tags">
+   
+    <app-tag  [linkDest]="linkDest"[tagName]="tag" [makeActive]="true" [type]="'category'"></app-tag>
+    {{counterArr[tag]}}
+   
+  </li>
+
+</div>
+
+<div class="sortByAuthor">
+    <h3>sortByAuthor</h3>
+    <li *ngFor="let author of authors">
+      <app-tag  [tagName]="author" [makeActive]="true" [type]="'author'"></app-tag>
+
+    </li>
+
+</div>
+
+<div class="sortByDate">    <h3>sortByDate</h3>
+</div>
