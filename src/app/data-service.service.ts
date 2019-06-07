@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataServiceService {
-  myPosts = '../../assets/blogData/posts.json'
+  myPosts = '/assets/blogData/posts.json'
   myData=[]
 
   getConfig() {
